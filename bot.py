@@ -93,10 +93,7 @@ def get_current_group(message):
 def gr(message):
     args = extract_arg(message.text)
     user = orm.get_user_by_id(message.from_user.id)
-
     group_name = args[0]
-    print(group_name)
-    print(len(group_name))
 
     # send suggestions if recived group name is not exist 
     if not api.is_exist_group(group_name):
